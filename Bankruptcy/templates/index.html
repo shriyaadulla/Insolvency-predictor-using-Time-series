@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankruptcy Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bankruptcy Prediction Form</h1>
+        <form action="/predict" method="POST">
+            <label for="current_liability_to_current_assets">Current Liability to Current Assets</label>
+            <input type="text" name="current_liability_to_current_assets" required><br>
+
+            <label for="liability_assets_flag">Liability-Assets Flag</label>
+            <input type="text" name="liability_assets_flag" required><br>
+
+            <label for="total_expense_assets">Total Expense / Assets</label>
+            <input type="text" name="total_expense_assets" required><br>
+
+            <label for="cash_current_liability">Cash / Current Liability</label>
+            <input type="text" name="cash_current_liability" required><br>
+
+            <label for="fixed_assets_turnover_frequency">Fixed Assets Turnover Frequency</label>
+            <input type="text" name="fixed_assets_turnover_frequency" required><br>
+
+            <label for="fixed_assets_to_assets">Fixed Assets to Assets</label>
+            <input type="text" name="fixed_assets_to_assets" required><br>
+
+            <label for="net_value_growth_rate">Net Value Growth Rate</label>
+            <input type="text" name="net_value_growth_rate" required><br>
+
+            <label for="revenue_per_person">Revenue per Person</label>
+            <input type="text" name="revenue_per_person" required><br>
+
+            <label for="total_assets_to_gnp_price">Total Assets to GNP Price</label>
+            <input type="text" name="total_assets_to_gnp_price" required><br>
+
+            <label for="quick_asset_turnover_rate">Quick Asset Turnover Rate</label>
+            <input type="text" name="quick_asset_turnover_rate" required><br>
+
+            <label for="tax_rate">Tax Rate</label>
+            <input type="text" name="tax_rate" required><br>
+
+            <label for="cash_total_assets">Cash / Total Assets</label>
+            <input type="text" name="cash_total_assets" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

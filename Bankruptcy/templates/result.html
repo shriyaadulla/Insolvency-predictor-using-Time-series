@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <center><h1>Prediction Result</h1></center>
+       <h2 style="color: rgb(0, 217, 255);"><p>The company is predicted to be: <strong>{{ prediction }}</strong></p></h2>
+      <button><a href="/">Go Back</a></button>
+
+        <!-- Render the graphs -->
+        <div id="timeseries-graph" style="width:100%; height:900px;"></div>
+
+        <script>
+            var graphs = {{ graphJSON|safe }};
+            Plotly.newPlot('timeseries-graph', graphs.data, graphs.layout);
+        </script>
+    </div>
+</body>
+</html>
